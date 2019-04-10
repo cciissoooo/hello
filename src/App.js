@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './components/Navbar'
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
 import Home from './components/Home'
-import Contact from './components/Contact'
+import CSSTricks from './components/CSSTricks'
 import Post from './components/Post'
 import MarioKart from './components/MarioKart';
 
@@ -15,7 +15,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={Home}/>
             <Route path='/mario' component={MarioKart} />
-            <Route path='/contact' component={Contact} />
+            <Route path='/css' component={CSSTricks} />
             <Route path='/:post_id' component={Post} />
           </Switch>
         </div>

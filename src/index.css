@@ -17,7 +17,8 @@ nav a.active{
 .home .post img{
   position: absolute;
   top: 20px;
-  left: -100px;
+  left: 10px;
+  width: 80px;
   opacity: 0.6;
 }
 
@@ -32,21 +33,4 @@ nav a.active{
 
 .card-content {
   flex-grow: 1;
-}
-
-.circle {
-  width: 100px;
-  padding: 50px 0;
-  line-height: 0;
-  margin: 60px auto;
-  background: #ce93d8;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  transition: background 1s, transform 0.5s 1s ease-in;
-}
-
-.circle:hover {
-  background: salmon;
-  transform: rotate(360deg);
 }

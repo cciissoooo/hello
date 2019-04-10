@@ -1,0 +1,17 @@
+.circle {
+    width: 100px;
+    padding: 50px 0;
+    line-height: 0;
+    margin: 60px auto;
+    background: #ce93d8;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background 1s, transform 0.5s 1s ease-in;
+  }
+  
+  .circle:hover {
+    background: salmon;
+    transform: rotate(360deg);
+  }
+  

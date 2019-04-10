@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Pokeball from '../pokeball.png'
 import { connect } from 'react-redux'
 import { addPost } from '../actions/postActions'
 import { MarioKartCrash } from './MarioKart'
@@ -11,13 +10,6 @@ class Home extends Component {
     this.state = {newEvent: null};
   }
   
-  testCSS() {
-    return (
-      <div className="wrapper">
-        <div className="circle">Hi</div>
-      </div>
-    );
-  }
   handleClick = () => {
     this.setState({
       newEvent: {
@@ -68,7 +60,7 @@ class Home extends Component {
       posts.map(post => {
         return (
           <div className="post card" key={post.id}>
-            <img src={Pokeball} alt="A Pokeball" />
+            <img src="img/mushroom.png" alt="A Pokeball" />
             <div className="card-content">
               <Link to={'/' + post.id}>
                 <span className="card-title purple-text text-lighten-3">{post.title}</span>
@@ -88,8 +80,7 @@ class Home extends Component {
     return (
       <div>
         <div className="container home">
-        <MarioKartCrash />
-          {this.testCSS()}
+          <MarioKartCrash />
           {/* {this.newEvent()} */}
           {/* {this.addEvent()} */}
           {/* <h4 className="center">Home</h4> */}
