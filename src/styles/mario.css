@@ -26,8 +26,8 @@
 }
 
 .road {
+  position: relative;
   height: 300px;
-  display: inner-block;
   background: dimgrey;
   box-sizing: border-box;
   border-top: 2px solid grey;
@@ -53,7 +53,7 @@
 }
 
 .kart {
-  position: relative;
+  position: absolute;
   width: 120px;
   animation-duration: 5s;
   animation-delay: 1s;
@@ -67,25 +67,24 @@
 }
 
 .mario {
-  animation-name: drive;
+  left: 0;
+  top: 0;
+  
+  animation-name: drive; 
   animation-duration: 3s;
-  animation-timing-function: linear;
 }
 
 .luigi {
-  top: 140px;
-  animation-name: drive2;
+  left: 0;
+  top: 150px;
+  
+  animation-name: drive; 
   animation-duration: 5s;
-  animation-timing-function: linear;
 }
 
 @keyframes drive {
   from { left: 0;}
   to { left: calc(100% - 120px);}
-}
-@keyframes drive2 {
-  to { left: calc(100% - 240px);}
-  from { left: -120px;}
 }
 
 .mario2 {
@@ -101,7 +100,7 @@
     left:0;
   }
   50%{
-    left: calc(50% - 90px);
+    left: calc(50% - 60px);
     transform: rotate(0deg);
   }
   75%{
@@ -116,10 +115,10 @@
 
 @keyframes crash2 {               
   0%{
-    left: calc(100% - 240px);
+    left: calc(100% - 120px);
   }
   50%{
-    left: calc(50% - 120px);
+    left: calc(50% + 60px);
     transform: rotate(0deg);
   }
   75%{
@@ -127,7 +126,7 @@
     transform: rotate(15deg);
   }
   100%{
-    left: calc(100% - 240px);
+    left: calc(100% - 120px);
     transform: rotate(0deg);
   }
 }
