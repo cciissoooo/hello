@@ -1,17 +1,94 @@
 .circle {
-    width: 100px;
-    padding: 50px 0;
-    line-height: 0;
-    margin: 60px auto;
-    background: #ce93d8;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    transition: background 1s, transform 0.5s 1s ease-in;
-  }
-  
-  .circle:hover {
-    background: salmon;
-    transform: rotate(360deg);
-  }
-  
+  position: absolute;
+  top: 700px;
+  left: 1000px;
+
+  width: 100px;
+  padding: 50px 0;
+  line-height: 0;
+  /* margin: 60px auto; */
+  background: #ce93d8;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background 1s, transform 0.5s 1s ease-in;
+}
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
+}
+
+
+#pop-up{
+  position: relative;
+  width: 500px; 
+  margin: 0 auto; 
+  text-align: center;
+}
+#pop-up img {
+  width: 100px;
+}
+#pop-up .popup-container{
+  background: #ce93d8; 
+  padding: 30px; 
+  position: absolute; 
+  top: 80px; 
+  width: 100%; 
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+#pop-up input{
+  width: 300px;
+  height: 20px;
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #333;
+  font-size: 18px;
+}
+#pop-up button{
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  background: #333;
+  margin-left: -5px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #333;
+  font-size: 18px;
+}
+.cross{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #555;
+  color: #ddd;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  border-radius: 11px;
+}
+
+#pop-up {
+  top: -200px;
+  /* swing from the cross button */
+  /* transform-origin: 10px 10px; */
+  animation: drop 0.5s ease forwards,
+            swing 3s 1s ease-in-out infinite alternate;
+}
+
+#pop-up:hover {
+  animation-iteration-count: 1;
+}
+
+@keyframes drop {
+  0%{ opacity: 0;}
+  70%{ transform: translate3d(400px, 400px, 0); opacity: 1;}
+  100%{ transform: translate3d(0, 250px, 0); opacity: 1;}
+}
+
+@keyframes swing {
+  0%{ transform: translateY(250px) rotateZ(30deg) }
+  100%{ transform: translateY(250px) rotateZ(-30deg) }
+}
