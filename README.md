@@ -1,2 +1,2 @@
 # hello
-test using gitHub
+front-end testing using react and redux

@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #eee;
+}
+
+nav a.active{
+  border-bottom: 5px solid #333;
+  transition: all ease 0.5s;
+}
+
+.container{
+  margin-top: 20px;
+}
+
+.home .post img{
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  opacity: 0.6;
+}
+
+.home .post{
+  overflow: hidden;
+  padding-left: 80px;
+}
+
+.card {
+  display: flex;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.circle {
+  width: 100px;
+  padding: 50px 0;
+  line-height: 0;
+  margin: 60px auto;
+  background: #ce93d8;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: background 1s, transform 0.5s 1s ease-in;
+}
+
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
+}
